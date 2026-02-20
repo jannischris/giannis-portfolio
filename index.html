@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giannis — Strategy & Finance Portfolio</title>
+    <meta name="description" content="Strategy & finance research portfolio." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="container header">
+      <div class="brand" role="banner">
+        <div class="logo" aria-label="Logo">G</div>
+        <div>
+          <div class="name">Giannis</div>
+          <div class="tag">Strategy • Finance • Business Analysis</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-btn" data-section="home">Home</button>
+        <button class="nav-btn" data-section="research">Research</button>
+        <button class="nav-btn" data-section="about">About</button>
+        <button class="nav-btn primary" data-section="contact">Hire me</button>
+      </nav>
+    </header>
+
+    <main class="container" role="main">
+      <!-- HOME -->
+      <section id="home" class="section">
+        <div class="card">
+          <h1 class="headline">I turn business data into strategic decisions.</h1>
+          <p class="subhead">
+            MBA candidate with an IT background. I publish breakdowns on company strategy, unit economics and playbooks.
+          </p>
+          <div class="row">
+            <button class="btn primary" data-jump="research">View research</button>
+            <a class="btn" href="#" id="cvLink">Download CV (add link)</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEARCH (3D WALL) -->
+      <section id="research" class="section hidden">
+        <div class="research-wall">
+          <div class="wall-top">
+            <div>
+              <h2 class="research-title">Research</h2>
+              <p class="muted">3D wall grid. Hover a tile to see title. Click to expand inline.</p>
+            </div>
+
+            <div class="filters">
+              <input id="searchInput" type="search" placeholder="Search research…" aria-label="Search research" />
+              <select id="tagSelect" aria-label="Filter by tag">
+                <option value="all">All tags</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="status" class="status muted">Loading posts…</div>
+
+          <!-- Full-screen 3D stage -->
+          <div id="stage" class="stage" aria-label="3D research wall">
+            <div id="wall" class="wall">
+              <div id="posts" class="tiles"></div>
+            </div>
+
+            <button id="resetTilt" class="reset-tilt btn" type="button">Reset tilt</button>
+          </div>
+
+          <!-- Inline article -->
+          <div id="article" class="article hidden"></div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section hidden">
+        <div class="card">
+          <h2>About</h2>
+          <p><strong>Focus:</strong> Strategy, Corporate Finance, FP&A/Controlling, BizOps.</p>
+          <p><strong>Background:</strong> BSc in Informatics + MBA (in progress). Currently learning German.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section hidden">
+        <div class="card">
+          <h2>Hire me</h2>
+          <p>Open to BizOps / Strategy Analyst / FP&A roles in startups (Germany/remote).</p>
+          <div class="row">
+            <a class="btn primary" href="mailto:your.email@example.com">Email</a>
+            <a class="btn" href="#" id="linkedinLink">LinkedIn (add link)</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <span class="muted">© <span id="year"></span> Giannis — Strategy & Finance</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
